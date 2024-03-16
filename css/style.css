@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --left-profile-bgcolor: #f0f0f0;
+  --white: #ffffff;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  background: #d50821;
+  padding: .25rem 0;
+  margin-top:.1rem
+}
+.profile-left {
+  width: 30%; 
+  background: var(--left-profile-bgcolor); 
+  float: left;
+}
+
+.profile-left section{
+    padding: 0 1.25rem;
+  }
+
+.profile-right {
+  width: 70%;
+  float: right;
+  padding: 0 1.5rem;
+  background: #fff;
+}
+
+/* proile name and photo section start */
+
+.proile-name-photo {
+  background: #333333;
+  color: var(--white);
+  text-align: center;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  border-radius: 0 0 200px 200px;
+}
+
+.proile-name-photo .profile-name {
+  padding-top: 75px;
+}
+
+.proile-name-photo .profile-name .name,
+.proile-name-photo .profile-name .title {
+  text-transform: uppercase;
+}
+
+.proile-name-photo .profile-name .name {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 0.75rem;
+}
+
+.proile-name-photo .profile-photo {
+  margin: 2rem auto 0;
+}
+
+.proile-name-photo .profile-photo img {
+  width: 250px;
+}
+
+/* proile name and photo section end */
+
+section .section-heading {
+    font-size: 1.75rem;
+    color:  #d50821;  
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: .75rem 0;
+}
+
+section .sub-heading {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color:  #d50821; 
+}
+
+/* contact me section */
+.contact-me {
+  padding: 1.25rem;
+}
+.section-heading {
+  position: relative;
+  display: flex;
+  gap: .75rem;
+}
+
+.section-heading .icon {
+  border-radius: 50%;
+  background: #d50821;
+}
+
+.section-heading .icon {
+    border-radius: 50%;
+    background: #d50821;
+  }
+
+/* contact me section */
+
+footer, header {
+    min-height: 50px;
+    background: #f2ab01;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+}
+
+footer ul{
+    list-style: none;
+    align-self: center;
+}
+
+footer ul li {
+    display: inline-block   
+}
