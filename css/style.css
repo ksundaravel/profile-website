@@ -50,6 +50,10 @@ body {
   background: #fff;
 }
 
+.profile-right .section-block .heading {
+  display: flex;
+}
+
 .profile-left .section-block .heading {
   text-align: center;
 }
@@ -103,6 +107,18 @@ body {
   letter-spacing: 1px;
 }
 
+.section-block .heading .heading-icon { 
+  flex: 0 0 1.5rem;
+}
+
+.section-block .heading .heading-icon img{
+  width: 1rem;
+}
+
+.section-block .heading .heading-title {
+  flex: 0 0 90%;
+}
+
 .section-block .content {
   color: #333333;
   font-size: 0.85rem;
@@ -116,7 +132,7 @@ body {
   padding: 0.25rem 0;
 }
 .contact-me .content .list-item-icon img {
-  width: 10px;
+  width: 12px;
   margin-right: 0.5rem;
 }
 
@@ -167,6 +183,24 @@ body {
   font-weight: 400;
 }
 /* job-experience end */
+
+
+/* education-list start */
+
+.education .education-list{
+  margin-bottom: 1rem;
+}
+
+.education .education-list .university {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f2ab01;
+}
+
+.education .education-list .degree {
+  font-weight: bold;
+}
+/* education-list end */
 
 /* languages-hobbies start */
 
@@ -222,6 +256,11 @@ footer ul {
   list-style: none;
   align-self: center;
   justify-content: center;
+  margin-bottom: 1rem;
+}
+
+footer ul.social-icons img {
+  width: 1rem;
 }
 
 footer ul li {
