@@ -25,11 +25,9 @@ body {
 .profile {
   position: relative;
   display: flex;
-  background: #d50821;
-  padding: 0.25rem 0;
 }
 .profile-left {
-  width: 30%;
+  flex: 0 0 30%;
   background: var(--left-profile-bgcolor);
   float: left;
 }
@@ -40,24 +38,45 @@ body {
 
 .profile-left .top-section,
 .profile-right .top-section {
-  padding-top: 5rem;
+  padding-top: 2.5rem;
 }
 
 .profile-right {
-  width: 70%;
-  float: right;
+  flex: 0 0 70%;
   padding: 0 1.5rem;
-  background: #fff;
+  background: #f5fcf3;
 }
 
 .profile-right .section-block .heading {
   display: flex;
+  border-bottom: 2px solid #333;
 }
 
 .profile-left .section-block .heading {
   text-align: center;
 }
+/* Header start */
+header {
+  background: #f2ab01;
+  padding: 1.5rem 1.25rem;
+  color: var(--white);
+  border-bottom: 5px solid var(--primary-color);
+}
 
+header .profile-name .name {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header .profile-name .title {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-style: italic;
+  color: #fff;
+}
+
+/* Header end */
 /* proile name and photo section start */
 
 .proile-name-photo {
@@ -66,21 +85,12 @@ body {
   text-align: center;
   padding: 0 1.25rem 1.25rem 1.25rem;
   border-radius: 0 0 200px 200px;
+  margin-bottom: 2rem;
 }
 
 .proile-name-photo .profile-name .name,
 .proile-name-photo .profile-name .title {
   text-transform: uppercase;
-}
-
-.proile-name-photo .profile-name .name {
-  font-size: 30px;
-  font-weight: bold;
-  padding-bottom: 0.75rem;
-}
-
-.proile-name-photo .profile-photo {
-  margin: 2rem auto 0;
 }
 
 .proile-name-photo .profile-photo img {
@@ -108,7 +118,7 @@ body {
 }
 
 .section-block .heading .heading-icon { 
-  flex: 0 0 1.5rem;
+  flex: 0 0 5%;
 }
 
 .section-block .heading .heading-icon img{
@@ -116,7 +126,7 @@ body {
 }
 
 .section-block .heading .heading-title {
-  flex: 0 0 90%;
+  flex: 0 0 95%;
 }
 
 .section-block .content {
@@ -125,6 +135,10 @@ body {
 }
 
 /* section Block end */
+
+.heading.icon-heading {
+  display: flex;
+}
 
 /* contact-me start */
 .contact-me .content .list-item {
@@ -150,6 +164,7 @@ body {
 .reference-list .contact-list .contact-name {
   font-weight: bold;
   color: #f2ab01;
+  font-size: 1rem;
 }
 /* reference-list end */
 
@@ -179,7 +194,7 @@ body {
   font-style: italic;
   text-transform: none;
   display: block;
-  color: #b4b4b4;
+  color: #737373;
   font-weight: 400;
 }
 /* job-experience end */
@@ -221,6 +236,14 @@ body {
   flex: 0 0 50%;
 }
 
+.languages-hobbies .heading .heading-icon {
+  flex: 0 0 10%;
+}
+
+.languages-hobbies .heading .heading-title {
+  flex: 0 0 90%;
+}
+
 /* languages-hobbies End */
 
 /* skills start */
@@ -250,6 +273,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem 0;
+  border-top: 5px solid var(--primary-color);
 }
 
 footer ul {
