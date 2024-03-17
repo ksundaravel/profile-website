@@ -199,6 +199,7 @@ body {
 
 .education .education-list .degree {
   font-weight: bold;
+  text-transform: capitalize;
 }
 /* education-list end */
 
