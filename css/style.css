@@ -5,15 +5,27 @@
 }
 
 :root {
-  --left-profile-bgcolor: #f0f0f0;
+  --default-bg: #f0f0f0;
   --white: #ffffff;
-  --primary-color: #d50821;
+  --primary: #015761; 
+  --secondary: #d50821;
+  --teritary: #f2ab01; 
+  --accent: #333333;
+  --main-text: #272829;
+  --section-bg: #f5f8fd;
+  --tag: #e4edf9;
 }
 body {
-  font-family: sans-serif;
-  font-size: 0.85rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
   line-height: 1.5;
-  color: #333333;
+  color: var(--main-text);
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
 }
 
 .container {
@@ -22,14 +34,23 @@ body {
   max-width: 960px;
 }
 
+.tag {
+  background: var(--tag);
+  padding: 5px 15px;
+}
+
+i {
+  margin-right: .5rem;
+}
+
 .profile {
   position: relative;
   display: flex;
 }
 .profile-left {
-  flex: 0 0 30%;
-  background: var(--left-profile-bgcolor);
+  flex: 0 0 25%;  
   float: left;
+  background: var(--section-bg);
 }
 
 .profile-left section {
@@ -42,9 +63,9 @@ body {
 }
 
 .profile-right {
-  flex: 0 0 70%;
+  flex: 0 0 75%;
   padding: 0 1.5rem;
-  background: #f5fcf3;
+  background: var(--white);
 }
 
 .profile-right .section-block .heading {
@@ -55,22 +76,43 @@ body {
 .profile-left .section-block .heading {
   text-align: center;
 }
-/* Header start */
+
+.profile-left h4{
+  display: inline-block;
+  color: var(--teritary);
+}
+/* core Style start */
+h1, .h1 {
+  color: var(--teritary);
+}
+
+h3, .h3 {
+  color: var(--primary)
+}
+h4, .h4 {
+  color: var(--secondary);
+}
+
+h5, .h5 {
+  color: var(--primary);
+}
+/* core Style end */
+/* Header start*/
 header {
-  background: #f2ab01;
-  padding: 1.5rem 1.25rem;
+  background: var(--primary);  
   color: var(--white);
-  border-bottom: 5px solid var(--primary-color);
+  border-bottom: 5px solid var(--secondary);
+}
+header .profile-name {
+  padding: 1.25rem;
 }
 
 header .profile-name .name {
-  font-size: 25px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 header .profile-name .title {
-  font-size: 1rem;
   text-transform: capitalize;
   font-style: italic;
   color: #fff;
@@ -79,12 +121,10 @@ header .profile-name .title {
 /* Header end */
 /* proile name and photo section start */
 
-.proile-name-photo {
-  background: #333333;
+.proile-name-photo { 
   color: var(--white);
   text-align: center;
-  padding: 0 1.25rem 1.25rem 1.25rem;
-  border-radius: 0 0 200px 200px;
+  padding: 0 1.25rem 1.25rem 1.25rem;  
   margin-bottom: 2rem;
 }
 
@@ -107,32 +147,36 @@ header .profile-name .title {
   position: relative;
 }
 
-.section-block .heading {
-  color: var(--primary-color);
-  font-size: 1rem;
+.section-block .heading { 
+  color: var(--primary);
   font-weight: bold;
   padding: 3px 0;
   text-transform: uppercase;
-  margin: 0.5rem 0;
+  margin: 2rem 0 1rem 0;
   letter-spacing: 1px;
 }
 
+.section-block .heading ::after {
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background: var(--primary);
+}
+
 .section-block .heading .heading-icon { 
-  flex: 0 0 5%;
+  flex: 0 0 3%;
 }
 
-.section-block .heading .heading-icon img{
-  width: 1rem;
+.section-block .heading .heading-icon i{ 
+  font-size: 1.5rem;
 }
-
 .section-block .heading .heading-title {
-  flex: 0 0 95%;
+  flex: 0 0 97%;
 }
 
-.section-block .content {
-  color: #333333;
-  font-size: 0.85rem;
-}
 
 /* section Block end */
 
@@ -163,8 +207,7 @@ header .profile-name .title {
 
 .reference-list .contact-list .contact-name {
   font-weight: bold;
-  color: #f2ab01;
-  font-size: 1rem;
+  color:  var(--teritary);
 }
 /* reference-list end */
 
@@ -179,7 +222,6 @@ header .profile-name .title {
 }
 
 .job-experience .experience-title .role {
-  color: #f2ab01;
   text-transform: uppercase;
   flex: 0 0 80%;
 }
@@ -209,7 +251,6 @@ header .profile-name .title {
 .education .education-list .university {
   font-weight: bold;
   text-transform: uppercase;
-  color: #f2ab01;
 }
 
 .education .education-list .degree {
@@ -236,14 +277,6 @@ header .profile-name .title {
   flex: 0 0 50%;
 }
 
-.languages-hobbies .heading .heading-icon {
-  flex: 0 0 10%;
-}
-
-.languages-hobbies .heading .heading-title {
-  flex: 0 0 90%;
-}
-
 /* languages-hobbies End */
 
 /* skills start */
@@ -268,11 +301,11 @@ header .profile-name .title {
 
 /* location end */
 footer {  
-  background: #f2ab01;
+  background: var(--primary);
   color: #fff;
   text-align: center;
   padding: 1.5rem 1.25rem;
-  border-top: 5px solid var(--primary-color);
+  border-top: 5px solid var(--secondary);
 }
 
 footer ul {
@@ -293,5 +326,6 @@ footer ul li {
 
 footer ul li a {
   color: #fff;
+  text-decoration: none;
   margin-right: 0.5rem;
 }
